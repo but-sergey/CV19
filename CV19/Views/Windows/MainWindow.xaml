@@ -133,14 +133,13 @@
                         <DockPanel>
                             <UniformGrid DockPanel.Dock="Bottom" Rows="1" Margin="0,3">
                                 <UniformGrid.Resources>
-                                    <Style x:Key="ButtonStyle" TargetType="Button">
+                                    <!--<Style TargetType="Button">
                                         <Setter Property="Margin" Value="3,0"/>
                                         <Setter Property="Padding" Value="3,5"/>
-                                        <Setter Property="Background" Value="White"/>
-                                    </Style>
+                                    </Style>-->
                                 </UniformGrid.Resources>
-                                <Button Content="Добавить" Style="{StaticResource ButtonStyle}" Command="{Binding CreateGroupCommand}"/>
-                                <Button Content="Удалить" Style="{StaticResource ButtonStyle}" Command="{Binding DeleteGroupCommand}" CommandParameter="{Binding SelectedGroup}"/>
+                                <Button Content="Добавить" Style="{StaticResource PrimaryBrn}" Command="{Binding CreateGroupCommand}"/>
+                                <Button Content="Удалить" Style="{StaticResource DangerBtn}" Command="{Binding DeleteGroupCommand}" CommandParameter="{Binding SelectedGroup}"/>
                             </UniformGrid>
                             <ListBox ItemsSource="{Binding Groups}" SelectedIndex="0"
                                  SelectedItem="{Binding SelectedGroup}">
@@ -205,6 +204,11 @@
                                     DataFieldX="XValue"
                                     DataFieldY="YValue"/>
                 </oxy:Plot>
+            </TabItem>
+            <TabItem Header="Вкладка 2">
+                <Button VerticalAlignment="Top" HorizontalAlignment="Left"
+                        Content="123" Margin="15,5" Padding="14,5"
+                        Style="{StaticResource DangerBtn}"/>
             </TabItem>
         </TabControl>
     </DockPanel>
