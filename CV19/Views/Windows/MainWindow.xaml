@@ -104,8 +104,8 @@
                                         <Setter Property="Padding" Value="3,5"/>
                                     </Style>-->
                                 </UniformGrid.Resources>
-                                <Button Content="Добавить" Style="{StaticResource PrimaryBrn}" Command="{Binding CreateGroupCommand}"/>
-                                <Button Content="Удалить" Style="{StaticResource DangerBtn}" Command="{Binding DeleteGroupCommand}" CommandParameter="{Binding SelectedGroup}"/>
+                                <Button Content="Добавить" Style="{StaticResource CheckButtonStyle}" Command="{Binding CreateGroupCommand}"/>
+                                <Button Content="Удалить" Style="{StaticResource RemoveButtonStyle}" Command="{Binding DeleteGroupCommand}" CommandParameter="{Binding SelectedGroup}"/>
                             </UniformGrid>
                             <ListBox ItemsSource="{Binding Groups}" SelectedIndex="0"
                                  SelectedItem="{Binding SelectedGroup}">
@@ -173,8 +173,9 @@
             </TabItem>
             <TabItem Header="Вкладка 2">
                 <Button VerticalAlignment="Top" HorizontalAlignment="Left"
-                        Content="123" Margin="15,5" Padding="14,5"
-                        Style="{StaticResource DangerBtn}"/>
+                        Content="123" Margin="15,5" Padding="14,5" Width="110"
+                        Style="{StaticResource CheckButtonStyle}"
+                        HorizontalContentAlignment="Center"/>
             </TabItem>
         </TabControl>
     </DockPanel>

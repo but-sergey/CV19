@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CV19WPFTest"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+    xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero">
+    <Window.Resources>
+        
+    </Window.Resources>
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Height="41" Margin="32,27,0,0" VerticalAlignment="Top" Width="130"/>
+        <Button Style="{DynamicResource ButtonStyle1}" Content="Button" HorizontalAlignment="Left" Height="41" Margin="32,27,0,0" VerticalAlignment="Top" Width="130"/>
         <TextBlock HorizontalAlignment="Left" Height="29" Margin="114,241,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Height="21" Margin="257,27,0,0" VerticalAlignment="Top" Width="134"/>
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="23" Margin="204,87,0,0" VerticalAlignment="Top" Width="120"/>
